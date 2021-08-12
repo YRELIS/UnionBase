@@ -38,9 +38,11 @@ namespace UnionBase
             this.label3 = new System.Windows.Forms.Label();
             this.btn_SelectFolder = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.lbl_countFileFolder = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -112,7 +114,7 @@ namespace UnionBase
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(6, 51);
+            this.label3.Location = new System.Drawing.Point(6, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(136, 27);
             this.label3.TabIndex = 5;
@@ -123,9 +125,9 @@ namespace UnionBase
             this.btn_SelectFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SelectFolder.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_SelectFolder.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_SelectFolder.Location = new System.Drawing.Point(159, 47);
+            this.btn_SelectFolder.Location = new System.Drawing.Point(11, 70);
             this.btn_SelectFolder.Name = "btn_SelectFolder";
-            this.btn_SelectFolder.Size = new System.Drawing.Size(96, 35);
+            this.btn_SelectFolder.Size = new System.Drawing.Size(244, 35);
             this.btn_SelectFolder.TabIndex = 6;
             this.btn_SelectFolder.Text = "SELECT";
             this.btn_SelectFolder.UseVisualStyleBackColor = true;
@@ -133,6 +135,8 @@ namespace UnionBase
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btn_SelectFolder);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -140,10 +144,34 @@ namespace UnionBase
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Location = new System.Drawing.Point(12, 44);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(274, 295);
+            this.groupBox1.Size = new System.Drawing.Size(274, 205);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Settings";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(6, 123);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(234, 27);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Load File in Programm:";
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(11, 153);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(244, 35);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "LOAD";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btn_LoadFile_Click);
             // 
             // groupBox2
             // 
@@ -154,39 +182,39 @@ namespace UnionBase
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Location = new System.Drawing.Point(292, 44);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(334, 295);
+            this.groupBox2.Size = new System.Drawing.Size(334, 205);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Info";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(6, 51);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 27);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Count file:";
             // 
             // lbl_countFileFolder
             // 
             this.lbl_countFileFolder.AutoSize = true;
             this.lbl_countFileFolder.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lbl_countFileFolder.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_countFileFolder.Location = new System.Drawing.Point(136, 51);
+            this.lbl_countFileFolder.Location = new System.Drawing.Point(136, 40);
             this.lbl_countFileFolder.Name = "lbl_countFileFolder";
             this.lbl_countFileFolder.Size = new System.Drawing.Size(24, 27);
             this.lbl_countFileFolder.TabIndex = 8;
             this.lbl_countFileFolder.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(6, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(108, 27);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Count file:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 280);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.InfoProgramm);
@@ -197,7 +225,7 @@ namespace UnionBase
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Union Base";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -222,6 +250,8 @@ namespace UnionBase
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lbl_countFileFolder;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button2;
     }
 }
 

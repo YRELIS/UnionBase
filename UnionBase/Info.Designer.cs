@@ -163,8 +163,9 @@ namespace UnionBase
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Info";
-            this.Text = "Form1";
+            this.Text = "Union Base - INFO";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Info_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

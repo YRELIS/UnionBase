@@ -14,6 +14,7 @@ namespace UnionBase
     public partial class Form1 : Form
     {
         string ActiveFolderPath = String.Empty;
+        List<string> listFileInFoler = new List<string>();
         public Form1()
         {
             InitializeComponent();
@@ -65,7 +66,28 @@ namespace UnionBase
             {
                 ActiveFolderPath = FBD.SelectedPath.ToString();
                 lbl_countFileFolder.Text = Directory.GetFiles(ActiveFolderPath).Length.ToString();
+
             }
+        }
+        public string getFileExtension(string fileName)
+        {
+            return fileName.Substring(fileName.LastIndexOf(".") + 1);
+        }
+
+        private void btn_LoadFile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (var item in Directory.GetFiles(ActiveFolderPath))
+                {
+                    listFileInFoler.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+
         }
     }
 }
